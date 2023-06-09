@@ -1,0 +1,287 @@
+/*
+ samenvatting afkortingen:
+
+General:                            Cards:                         Details:                            Top:
+
+OD = Original Div               CD = Card Div                   DT = Details Tekst                   TI = Top Image
+TD = Top Div                                                    DI = Details Image
+BD = Bottom Div                
+LD = Left Div                   CI = Card Image
+RD = Right Div                  CT = Card Tekst
+DD = Details Div                FB = Favorites Button
+                                 DB = Details button
+*/
+
+#bodyDiv{
+    height: 100vh;
+    width: 100vw;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(189, 223, 255);
+}
+
+.od{
+    height: 100vh;
+    width: 100vw;
+}
+
+.td{
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ti{
+    height: 80%;
+    width: 45%;
+    margin: 0 auto;
+}
+
+.bd{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+}
+
+.ld{
+    width: 70vw;
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.rd{
+    width: 30vw;
+    height: 100vh;   
+}
+
+.details, .cd{
+    width: 330px;
+    height: 450px;
+    border-radius: 20%;
+    border: 5px solid rgb(2, 3, 90);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.details{
+    background-color: rgb(252, 255, 78);
+    color:rgb(74, 137, 148);
+}
+.cd{
+    color:rgb(252, 255, 78);
+    background-color: rgb(74, 137, 148);
+}
+
+
+.ci{
+    width: 80%;
+    height: 50%;
+    margin: 5%;
+}
+
+.ct{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.fb, .db{
+    width: 60%;
+    height: 10%;
+    background-color:rgb(235, 255, 148);
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0 0 3%;
+     
+}
+.fb{
+    margin: 0 0 5%;
+}
+
+.dd{
+    background-color: rgb(74, 137, 148);
+    border:5px solid rgb(2, 3, 90);
+    border-radius: 25%;
+
+    width: 80%;
+    height: 65vh;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.di{
+    height: 45%;
+    width: 70%;
+    margin: 5%;
+}
+
+.dt{
+    font-size: 30px;
+    font-weight: bold;
+    color:rgb(253, 255, 148);
+}
+
+
+@media (max-width: 1700px){                                           /*width media queries*/
+    .cd, .details{
+        width: 300px;
+        height: 415px;
+    }
+    .dd{
+        width: 90%;
+        height: 60vh;
+        border-radius: 20%;
+    }
+}
+@media (max-width: 1500px){
+    .cd, .details{
+        width: 270px;
+        height: 380px;
+    }
+    .ct{
+        font-size: 20px;
+    }
+    .fb, .db{
+        width: 70%;
+    }
+    .dt{
+        font-size: 25px;
+    }
+    .dd{
+        width: 80%;
+        height: 53vh;
+        border-radius: 20%;
+    }
+
+}
+@media (max-width: 1400px){
+    .cd, .details{
+        width: 240px;
+        height: 345px;
+    }
+    .fb, .db{
+        font-size: 15px;
+    }
+}
+@media (max-width: 1300px){
+    .cd, .details{
+        width: 210px;
+        height: 310px;
+    }
+    .fb, .db{
+        width: 80%;
+    }
+    .dt{
+        font-size: 20px;
+    }
+    .dd{
+        width: 80%;
+        height: 45vh;
+        border-radius: 20%;
+    }
+}
+@media (max-width: 1100px){
+    .cd, .details{
+        width: 180px;
+        height: 275px;
+    }
+    .ct{
+       font-size: 15px;
+    }
+}
+@media (max-width: 1000px){
+    .dd{
+        width: 85%;
+        height: 35vh;
+        border-radius: 20%;
+    }
+}
+@media (max-width: 800px){
+    .bd{
+        flex-direction: column;
+        overflow-y:scroll;
+    }
+    .ld{
+        width: 100%;
+        height: 70vh;
+
+    }
+    .rd{
+        height: 30%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 1vh;
+    }
+    .dd{
+        background-color: rgb(148, 83, 74);
+        border:5px solid rgb(90, 15, 2);
+
+        width: 40%;
+        height: 100%;
+
+    }
+    .td{
+        display:none;
+    }
+}
+
+
+@media (max-height: 900px){                                   /*height media queries*/
+    .cd, .details{
+        height: 400px;
+    }
+}
+@media (max-height: 800px){
+    .dd{
+        width: 75%;
+        height: 65vh;
+    
+    }
+}
+@media (max-height: 750px){
+    .dd{
+        width: 70%;
+        height: 65vh;
+    
+    }
+}
+@media (max-height: 700px){
+    .ld{
+        width: 85vw;
+    }
+    .rd{
+        width: 15vw;
+    }
+    .cd, .details{
+        width: 240px;
+        height: 345px;
+    }
+    .ct{
+        font-size: 20px;
+    }
+    .fb, .db{
+        width: 80%;
+    }    
+    .dd{
+        background-color: rgb(148, 83, 74);
+        border:5px solid rgb(90, 15, 2);
+
+        width: 80%;
+        height: 310px;
+    }
+}
+@media (max-height: 500px){
+    .td{
+        display:none;
+    }
+}
